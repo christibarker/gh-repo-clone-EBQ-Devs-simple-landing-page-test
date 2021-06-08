@@ -1,2 +1,129 @@
 /******* LANDING PAGE STYLES *******/
 
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2 {
+  margin: 0.1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --centerWidth: 80%;
+  --mainMessageDir: column;
+  --navRowDir: column;
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --centerWidth: 40%;
+    --mainMessageDir: row;
+    --navRowDir: row;
+  }
+}
+
+.navRow {
+  display: flex;
+  font-size: 1.5em;
+}
+.navRow > ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navRow > ul > li {
+  flex: 1;
+  padding: 1em;
+}
+
+#navLogo {
+  display: flex;
+  flex: 4;
+}
+
+.btn {
+  padding: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: #2979ec;
+  width: 12em;
+  border: none;
+  border-radius: 60%;
+}
+
+.headerRow {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebf4ff;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+}
+
+.headerRow > h1 {
+  text-transform: uppercase;
+}
+
+.mainMessage {
+  display: flex;
+  justify-content: center;
+}
+
+.marketingTools {
+  display: flex;
+  flex: 1;
+  flex-direction: var(--mainMessageDir);
+}
+.marketingTools > img {
+  width: 50%;
+  height: auto;
+}
+
+.marketingTeam {
+  display: flex;
+  flex: 1;
+  flex-direction: var(--mainMessageDir);
+}
+.marketingTeam > img {
+  width: 50%;
+  height: auto;
+}
+
+.call_to_action {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  background-color: #2979ec;
+  text-align: center;
+  padding: 4em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn > #contact {
+  text-align: center;
+  border: white;
+}
