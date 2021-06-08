@@ -19,6 +19,8 @@ ul {
   list-style-type: none;
 }
 
+@import url("https://fonts.googleapis.com/css?family=openSans");
+
 body {
   display: flex;
   flex-direction: column;
@@ -26,6 +28,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* Variables */
 :root {
   --centerWidth: 80%;
   --mainMessageDir: column;
@@ -38,7 +41,12 @@ body {
     --mainMessageDir: row;
     --navRowDir: row;
   }
+  .featuredItemRow:first-child {
+    flex-direction: row-reverse;
+  }
 }
+
+/******* NAV PAGE STYLES *******/
 
 .navRow {
   display: flex;
@@ -51,6 +59,8 @@ body {
   width: 100px;
 }
 
+/******* BOTTON PAGE STYLES *******/
+
 .btn {
   font-size: 15px;
   text-transform: uppercase;
@@ -58,10 +68,16 @@ body {
   background-color: #2979ec;
   width: 200px;
   height: 60px;
-  border: none;
   padding: 10px 24px;
   border-radius: 36px;
+  border-color: white;
 }
+
+.button > .btn {
+  border-color: white;
+}
+
+/******* Header PAGE STYLES *******/
 
 .demo {
   padding-top: 25px;
@@ -89,45 +105,60 @@ body {
 .headerRow > h1 {
   text-transform: uppercase;
 }
+/******* CENTER PAGE STYLES *******/
 
-.mainMessage {
+.centerContent {
+  width: var(--centerWidth);
   display: flex;
-  justify-content: center;
-}
-
-.marketingTools {
-  display: flex;
-  flex: 1;
-  flex-direction: var(--mainMessageDir);
-}
-.marketingTools > img {
-  width: 50%;
-  height: auto;
+  flex-direction: column;
+  align-items: center;
 }
 
-.marketingTeam {
-  display: flex;
-  flex: 1;
-  flex-direction: var(--mainMessageDir);
+.featuresRow {
+    display: flex;
+    justify-content: center;
+
 }
-.marketingTeam > img {
-  width: 50%;
-  height: auto;
+
+.featuredItemRow {
+    display: flex;
+    flex: 1;
+    flex-direction: var(--featuredItemRowDir);
+
 }
+
+.featuredItemBox {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    padding-left: 50px;
+}
+
+.featuredItemBox > img {
+    width: 80%;
+    height: auto;
+
+/******* CTA PAGE STYLES *******/
 
 .call_to_action {
   display: flex;
   color: white;
   flex-direction: column;
-  background-color: #2979ec;
+  background-color: #0a459e;
   text-align: center;
   padding: 4em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  align-items: center;
 }
 
-.btn > #contact {
+#contact {
   text-align: center;
-  border: white;
+  background-color: #0a459e;
+  padding-top: 30px;
 }
