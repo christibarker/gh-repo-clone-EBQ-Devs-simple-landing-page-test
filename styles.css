@@ -13,13 +13,14 @@ html {
 h1,
 h2 {
   margin: 0.1em;
+  font-weight: bold;
 }
 
 ul {
   list-style-type: none;
 }
 
-@import url("https://fonts.googleapis.com/css?family=openSans");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 body {
   display: flex;
@@ -28,19 +29,27 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.centerContent {
+  width: var(--centerWidth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 /* Variables */
 :root {
-  --centerWidth: 80%;
-  --mainMessageDir: column;
-  --navRowDir: column;
+  --centerWidth: 90%;
+  --featuredItemRowDir: row;
+  --navRowDir: row;
 }
 
 @media (min-width: 1600px) {
   :root {
     --centerWidth: 40%;
-    --mainMessageDir: row;
-    --navRowDir: row;
+    --featuredItemRowDir: column;
+    --navRowDir: column;
   }
+
   .featuredItemRow:first-child {
     flex-direction: row-reverse;
   }
@@ -48,15 +57,39 @@ body {
 
 /******* NAV PAGE STYLES *******/
 
+.headerRow {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebf4ff;
+  text-align: left;
+  padding: 2em;
+  flex: 4;
+}
+
 .navRow {
   display: flex;
 }
 
 #navLogo {
   display: flex;
+  height: 95px;
+  width: 95px;
   flex: 4;
-  height: 100px;
-  width: 100px;
+}
+
+.demo {
+  padding-top: 25px;
+  padding-right: 15px;
+}
+
+#demo > .btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  padding: 1em;
 }
 
 /******* BOTTON PAGE STYLES *******/
@@ -79,78 +112,59 @@ body {
 
 /******* Header PAGE STYLES *******/
 
-.demo {
-  padding-top: 25px;
-  padding-right: 15px;
-}
-
-#demo > .btn {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  flex: 1;
-  padding: 1em;
-}
-
-.headerRow {
-  font-size: 1.5em;
-  display: flex;
-  flex-direction: column;
-  background-color: #ebf4ff;
-  text-align: left;
-  padding: 2em;
-}
-
 .headerRow > h1 {
   text-transform: uppercase;
 }
-/******* CENTER PAGE STYLES *******/
 
-.centerContent {
-  width: var(--centerWidth);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.thinFont {
+  font-weight: 300;
 }
 
-.featuresRow {
-    display: flex;
-    justify-content: center;
+.heroHeader p {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex: 4;
+}
+/******* CENTER PAGE STYLES *******/
 
+.featuresRow {
+  display: flex;
+  justify-content: center;
 }
 
 .featuredItemRow {
-    display: flex;
-    flex: 1;
-    flex-direction: var(--featuredItemRowDir);
-
+  display: flex;
+  flex: 1;
+  flex-direction: var(--featuredItemRowDir);
 }
 
 .featuredItemBox {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
-    margin: 1em;
-    padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  padding: 45px;
 }
 
 .featuredItemBox > img {
-    width: 80%;
-    height: auto;
+  width: 80%;
+  height: auto;
+  padding-bottom: 40px;
+}
 
 /******* CTA PAGE STYLES *******/
 
-.call_to_action {
+.callToAction {
   display: flex;
   color: white;
   flex-direction: column;
   background-color: #0a459e;
   text-align: center;
-  padding: 4em;
+  padding: 5em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -161,4 +175,8 @@ body {
   text-align: center;
   background-color: #0a459e;
   padding-top: 30px;
+}
+
+#contact .btn {
+  background-color: #0a459e;
 }
