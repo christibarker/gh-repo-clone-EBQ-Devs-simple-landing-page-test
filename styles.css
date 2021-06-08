@@ -42,34 +42,39 @@ body {
 
 .navRow {
   display: flex;
-  font-size: 1.5em;
-}
-.navRow > ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.navRow > ul > li {
-  flex: 1;
-  padding: 1em;
 }
 
 #navLogo {
   display: flex;
   flex: 4;
+  height: 100px;
+  width: 100px;
 }
 
 .btn {
-  padding: 1rem;
-  font-size: 1rem;
+  font-size: 15px;
   text-transform: uppercase;
   color: white;
   background-color: #2979ec;
-  width: 12em;
+  width: 200px;
+  height: 60px;
   border: none;
-  border-radius: 60%;
+  padding: 10px 24px;
+  border-radius: 36px;
+}
+
+.demo {
+  padding-top: 25px;
+  padding-right: 15px;
+}
+
+#demo > .btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  padding: 1em;
 }
 
 .headerRow {
@@ -77,8 +82,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ebf4ff;
-  align-items: center;
-  text-align: center;
+  text-align: left;
   padding: 2em;
 }
 
