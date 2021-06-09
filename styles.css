@@ -49,10 +49,6 @@ body {
     --featuredItemRowDir: column;
     --navRowDir: column;
   }
-
-  .featuredItemRow:first-child {
-    flex-direction: row-reverse;
-  }
 }
 
 /******* NAV PAGE STYLES *******/
@@ -113,7 +109,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 10%;
-  width: 50%;
+  width: 52%;
   padding-top: 15px;
 }
 
@@ -150,13 +146,15 @@ body {
   justify-content: var(--centerWidth);
   align-items: center;
   margin: 1em;
-  padding: 45px;
+  padding: 6%;
 }
 
 .featuredItemBox > img {
   width: 80%;
   height: auto;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
+  justify-content: var(--centerWidth);
+  align-items: center;
 }
 
 /******* CTA PAGE STYLES *******/
@@ -174,12 +172,11 @@ body {
   align-items: center;
 }
 
-#contact {
+#contactButton {
   text-align: center;
-  background-color: #0a459e;
   padding-top: 30px;
 }
 
-#contact > .btn {
+#contactButton > .btn {
   background-color: #0a459e;
 }
