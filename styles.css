@@ -38,14 +38,14 @@ body {
 
 /* Variables */
 :root {
-  --centerWidth: 90%;
+  --centerWidth: 100%;
   --featuredItemRowDir: row;
   --navRowDir: row;
 }
 
 @media (min-width: 1600px) {
   :root {
-    --centerWidth: 40%;
+    --centerWidth: 50%;
     --featuredItemRowDir: column;
     --navRowDir: column;
   }
@@ -62,12 +62,10 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ebf4ff;
-  text-align: left;
   padding: 2em;
-  flex: 4;
 }
 
-.navRow {
+.navlogo {
   display: flex;
 }
 
@@ -78,12 +76,12 @@ body {
   flex: 4;
 }
 
-.demo {
+.demoButton {
   padding-top: 25px;
   padding-right: 15px;
 }
 
-#demo > .btn {
+#demoButton > .btn {
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -111,21 +109,26 @@ body {
 }
 
 /******* Header PAGE STYLES *******/
+.headerRowContent {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  width: 50%;
+  padding-top: 15px;
+}
 
-.headerRow > h1 {
+.headerRowContent > h1 {
   text-transform: uppercase;
+}
+
+.headerRowContent > p {
+  font-weight: 300;
 }
 
 .thinFont {
   font-weight: 300;
 }
 
-.heroHeader p {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  flex: 4;
-}
 /******* CENTER PAGE STYLES *******/
 
 .featuresRow {
@@ -144,7 +147,7 @@ body {
   flex-direction: column;
   flex: 1;
   text-align: left;
-  justify-content: center;
+  justify-content: var(--centerWidth);
   align-items: center;
   margin: 1em;
   padding: 45px;
@@ -177,6 +180,6 @@ body {
   padding-top: 30px;
 }
 
-#contact .btn {
+#contact > .btn {
   background-color: #0a459e;
 }
